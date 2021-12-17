@@ -1,0 +1,36 @@
+﻿@model List<FishWebConnection.Models.Fisk>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/css/MinStil.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+</head>
+<body>
+    <h1>Här kan du se information om olika fiskar</h1>
+
+    <table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(m => item.fiskId)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.art)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.fakta)
+                </td>
+            </tr>
+        }
+    </table>
+
+ 
+</body>
+</html>
